@@ -1,9 +1,13 @@
-import { NgModule } from '@angular/core'
-import { Routes } from '@angular/router'
-import { NativeScriptRouterModule } from '@nativescript/angular'
+import {NgModule} from '@angular/core'
+import {Routes} from '@angular/router'
+import {NativeScriptRouterModule} from '@nativescript/angular'
+import {CarDetailComponent} from "~/app/car-detail/car-detail.component";
+import {CarDetailEditComponent} from "~/app/car-detail-edit/car-detail-edit.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'car-detail/:id', component: CarDetailComponent},
+  {path: 'car-detail-edit/:id', component: CarDetailEditComponent},
   {
     path: 'home',
     loadChildren: () => import('~/app/home/home.module').then((m) => m.HomeModule),
@@ -30,4 +34,5 @@ const routes: Routes = [
   imports: [NativeScriptRouterModule.forRoot(routes)],
   exports: [NativeScriptRouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

@@ -22,7 +22,6 @@ export class BrowseComponent implements OnInit, OnDestroy {
 
   constructor(private _carService: CarService, private _routerExtensions: RouterExtensions) {
   }
-  //
 
   ngOnInit(): void {
     if (!this._dataSubscription) {
