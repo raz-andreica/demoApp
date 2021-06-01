@@ -48,6 +48,7 @@
     "@angular/router": "~11.2.7",
     "@nativescript/angular": "~11.8.0",
     "@nativescript/core": "~8.0.0",
+    "@nativescript/imagepicker": "^1.0.4",
     "@nativescript/theme": "~3.0.1",
     "nativescript-ui-listview": "^9.1.0",
     "nativescript-ui-sidedrawer": "~9.0.3",

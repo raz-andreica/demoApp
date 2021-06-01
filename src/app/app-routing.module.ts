@@ -23,7 +23,7 @@ const routes: Routes = [
   {
     path: 'settings',
     loadChildren: () => import('~/app/settings/settings.module').then((m) => m.SettingsModule),
-  },
+  }
 ]
 
 @NgModule({
