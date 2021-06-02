@@ -18,12 +18,12 @@
         <ng-template tkListItemTemplate let-car="item">
             <StackLayout class="cars-list__item">
                 <GridLayout rows="*, *, *" columns="*, *" class="cars-list__item-content">
-                    <Label [text]="car.name" class="cars-list__item-name font-weight-bold"></Label>
+                    <Label style="color:indianred" [text]="car.name" class="cars-list__item-name font-weight-bold"></Label>
                     <Label col="1" horizontalAlignment="right" class="m-r-5">
                         <FormattedString>
-                            <Span text="&euro;"></Span>
+                            <Span style="color:darkgreen" text="&euro;"></Span>
                             <Span [text]="car.price"></Span>
-                            <Span text="/day"></Span>
+                            <Span style="color:darkgrey" text="/day"></Span>
                         </FormattedString>
                     </Label>
 

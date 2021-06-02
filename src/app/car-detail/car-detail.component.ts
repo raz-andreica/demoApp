@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core'
-import { PageRoute, RouterExtensions } from '@nativescript/angular'
-import { switchMap } from 'rxjs/operators'
+import {Component, OnInit} from '@angular/core'
+import {PageRoute, RouterExtensions} from '@nativescript/angular'
+import {switchMap} from 'rxjs/operators'
 
-import { Car } from '../shared/car.model'
-import { CarService } from '../shared/car.service'
+import {Car} from '../shared/car.model'
+import {CarService} from '../shared/car.service'
+import {Dialogs} from "@nativescript/core";
 
 /* ***********************************************************
  * This is the item details component in the master-detail structure.
@@ -21,7 +22,8 @@ export class CarDetailComponent implements OnInit {
     private _carService: CarService,
     private _pageRoute: PageRoute,
     private _routerExtensions: RouterExtensions
-  ) {}
+  ) {
+  }
 
   /* ***********************************************************
    * Use the "ngOnInit" handler to get the data item id parameter passed through navigation.
@@ -58,13 +60,27 @@ export class CarDetailComponent implements OnInit {
    * Check out the edit page in the /cars/car-detail-edit folder.
    *************************************************************/
   onEditButtonTap(): void {
-    this._routerExtensions.navigate(['/car-detail-edit', this._car.id], {
-      animated: true,
-      transition: {
-        name: 'slideTop',
-        duration: 200,
-        curve: 'ease',
-      },
-    })
+
+    const readOnlyMessage =
+      'Note that regular users will not have access to this'
+    const queue = Promise.resolve()
+    queue
+      .then(() =>
+        Dialogs.alert({
+          title: 'Admin demo!',
+          message: readOnlyMessage,
+          okButtonText: 'Ok',
+        })
+      )
+      .then(() =>
+        this._routerExtensions.navigate(['/car-detail-edit', this._car.id], {
+          animated: true,
+          transition: {
+            name: 'slideTop',
+            duration: 200,
+            curve: 'ease',
+          },
+        })
+      )
   }
 }

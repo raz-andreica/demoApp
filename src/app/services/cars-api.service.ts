@@ -1,6 +1,6 @@
 import db from "./cars-db.json"
 
-class ApiService {
+class CarsApiService {
 
   private db: any;
 
@@ -27,4 +27,4 @@ class ApiService {
   }
 }
 
-export default new ApiService;
+export default new CarsApiService;

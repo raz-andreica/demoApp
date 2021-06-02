@@ -10,7 +10,11 @@ const routes: Routes = [
   {path: 'car-detail-edit/:id', component: CarDetailEditComponent},
   {
     path: 'home',
-    loadChildren: () => import('~/app/home/home.module').then((m) => m.HomeModule),
+    loadChildren: () => import('~/app/bookings/bookings.module').then((m) => m.BookingsModule),
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('~/app/user-profile/user-profile.module').then((m) => m.UserProfileModule),
   },
   {
     path: 'browse',

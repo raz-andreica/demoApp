@@ -1,7 +1,7 @@
 import { Injectable, NgZone } from '@angular/core'
 import { Observable, throwError } from 'rxjs'
 import { catchError } from 'rxjs/operators'
-import ApiService  from "../services/api.service";
+import ApiService  from "../services/cars-api.service";
 
 import { Car } from './car.model'
 

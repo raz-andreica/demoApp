@@ -97,70 +97,59 @@ export class CarDetailEditComponent implements OnInit {
   }
 
   onDoneButtonTap(): void {
-    /* ***********************************************************
-     * By design this app is set up to work with read-only sample data.
-     * Follow the steps in the "Firebase database setup" section in app/readme.md file
-     * and uncomment the code block below to make it editable.
-     *************************************************************/
 
-    /* ***********************************************************
-        let queue = Promise.resolve();
+    let queue = Promise.resolve();
 
-        this._isUpdating = true;
+    this._isUpdating = true;
 
-        if (this._isCarImageDirty && this._car.imageUrl) {
-            queue = queue
-                .then(() => this._carService.uploadImage(this._car.imageStoragePath, this._car.imageUrl))
-                .then((uploadedFile: any) => {
-                    this._car.imageUrl = uploadedFile.url;
-                });
-        }
+    if (this._isCarImageDirty && this._car.imageUrl) {
+      queue = queue
+        .then(() => this._carService.uploadImage(this._car.imageStoragePath, this._car.imageUrl))
+        .then((uploadedFile: any) => {
+          this._car.imageUrl = uploadedFile.url;
+        });
+    }
 
-        queue.then(() => this._carService.update(this._car))
-            .then(() => {
-                this._isUpdating = false;
-                this._routerExtensions.navigate(["/cars"], {
-                    clearHistory: true,
-                    animated: true,
-                    transition: {
-                        name: "slideBottom",
-                        duration: 200,
-                        curve: "ease"
-                    }
-                });
-            })
-            .catch((errorMessage: any) => {
-                this._isUpdating = false;
-                Dialogs.alert({ title: "Oops!", message: "Something went wrong. Please try again.", okButtonText: "Ok" });
-            });
-        *************************************************************/
-
-    /* ***********************************************************
-     * Comment out the code block below if you made the app editable.
-     *************************************************************/
-    const readOnlyMessage =
-      'Check out the "Firebase database setup" section in the readme file to make it editable.'
-    const queue = Promise.resolve()
-    queue
-      .then(() =>
-        Dialogs.alert({
-          title: 'Read-Only Template!',
-          message: readOnlyMessage,
-          okButtonText: 'Ok',
-        })
-      )
-      .then(() =>
-        this._routerExtensions.navigate(['/browse'], {
+    queue.then(() => this._carService.update(this._car))
+      .then(() => {
+        this._isUpdating = false;
+        this._routerExtensions.navigate(["/browse"], {
           clearHistory: true,
           animated: true,
           transition: {
-            name: 'slideBottom',
+            name: "slideBottom",
             duration: 200,
-            curve: 'ease',
-          },
-        })
-      )
+            curve: "ease"
+          }
+        });
+      })
+      .catch((errorMessage: any) => {
+        this._isUpdating = false;
+        Dialogs.alert({title: "Oops!", message: "Something went wrong. Please try again.", okButtonText: "Ok"});
+      });
   }
+  //   const readOnlyMessage =
+  //   const queue = Promise.resolve()
+  //   queue
+  //     .then(() =>
+  //       Dialogs.alert({
+  //         title: 'Read-Only Template!',
+  //         message: readOnlyMessage,
+  //         okButtonText: 'Ok',
+  //       })
+  //     )
+  //     .then(() =>
+  //       this._routerExtensions.navigate(['/browse'], {
+  //         clearHistory: true,
+  //         animated: true,
+  //         transition: {
+  //           name: 'slideBottom',
+  //           duration: 200,
+  //           curve: 'ease',
+  //         },
+  //       })
+  //     )
+  // }
 
   private initializeEditOptions(): void {
     for (const classItem of carClassList) {
