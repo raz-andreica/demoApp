@@ -1,9 +1,9 @@
-import { Injectable, NgZone } from '@angular/core'
-import { Observable, throwError } from 'rxjs'
-import { catchError } from 'rxjs/operators'
-import ApiService  from "../services/cars-api.service";
+import {Injectable, NgZone} from '@angular/core'
+import {Observable, throwError} from 'rxjs'
+import {catchError} from 'rxjs/operators'
+import ApiService from "../services/cars-api.service";
 
-import { Car } from './car.model'
+import {Car} from './car.model'
 
 const editableProperties = [
   'doors',
@@ -26,7 +26,8 @@ export class CarService {
 
   private _cars: Array<Car> = []
 
-  constructor(private _ngZone: NgZone) {}
+  constructor(private _ngZone: NgZone) {
+  }
 
   getCarById(id: string): Car {
     if (!id) {

@@ -23,7 +23,6 @@ class CarsApiService {
       path: path,
       listeners: this.db.cars
     }
-
   }
 }
 

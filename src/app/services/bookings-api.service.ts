@@ -14,10 +14,10 @@ class BookingsApiService {
   }
 
   addValueEventListener(onValueEvent, path) {
-    onValueEvent(this.db.cars)
+    onValueEvent(this.db.bookings)
     return {
       path: path,
-      listeners: this.db.cars
+      listeners: this.db.bookings
     }
   }
 }

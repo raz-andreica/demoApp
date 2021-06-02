@@ -1,7 +1,7 @@
 {
   "bookings": {
     "booking1": {
-      "id": "1",
+      "id": "booking1",
       "userId": "demoUser1",
       "carName": "Ford KA",
       "carImage": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FFord%20KA%2B.jpg?alt=media&token=cf090183-ef5a-4c05-9f60-b0cbdfda7188",
@@ -9,7 +9,7 @@
       "endDate": "01-06-21"
     },
     "booking2": {
-      "id": "2",
+      "id": "booking2",
       "userId": "demoUser1",
       "carName": "BMW 5 Series",
       "carImage": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FBMW%205%20Series.jpg?alt=media&token=dec5a0bf-e3ca-45d2-8f2e-c7b8a25530b5",
@@ -17,9 +17,9 @@
       "endDate": "05-06-21"
     },
     "booking3": {
-      "id": "3",
+      "id": "booking3",
       "userId": "demoUser1",
-      "carName": "",
+      "carName": "Smart",
       "carImage": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FSmart.jpg?alt=media&token=6891aca9-4211-4545-834e-c934ed671961",
       "startDate": "09-06-21",
       "endDate": "11-06-21"

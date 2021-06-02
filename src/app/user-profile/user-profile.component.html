@@ -1,13 +1,37 @@
 <ActionBar class="action-bar">
     <NavigationButton visibility="hidden"></NavigationButton>
     <GridLayout columns="50, *">
-        <Label class="action-bar-title" text="Bookings" colSpan="2"></Label>
+        <Label class="action-bar-title" text="Your profile" colSpan="2"></Label>
 
         <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
     </GridLayout>
 </ActionBar>
 
-<GridLayout class="page__content">
-    <Label class="page__content-icon fas" text="&#xf015;"></Label>
-    <Label class="page__content-placeholder" text="<!-- Nothing here yet! -->"></Label>
-</GridLayout>
+<
+<StackLayout row="0" margin="10">
+    <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
+    <Label fontSize="20" text="Demo user" horizontalAlignment="center"></Label>
+    <Label fontSize="20" text="demo@mail.com" horizontalAlignment="center"></Label>
+    <Label fontSize="25" marginTop="10" text="User Settings"></Label>
+
+    <ScrollView>
+        <StackLayout>
+            <Label margin="10" fontSize="20" text="Notifications"></Label>
+            <Label height="2" backgroundColor="#a9a9a9"></Label>
+            <Label margin="10" fontSize="20" text="Privacy"></Label>
+            <Label height="2" backgroundColor="#a9a9a9"></Label>
+            <Label margin="10" fontSize="20" text="Payments"></Label>
+            <Label height="2" backgroundColor="#a9a9a9"></Label>
+            <Label margin="10" fontSize="20" text="Change Email"></Label>
+            <Label height="2" backgroundColor="#a9a9a9"></Label>
+            <Label margin="10" fontSize="20" text="Change password"></Label>
+            <Label height="2" backgroundColor="#a9a9a9"></Label>
+            <Label margin="10" fontSize="20" text="Logout"></Label>
+            <Label height="2" backgroundColor="#a9a9a9"></Label>
+            <Label margin="10" fontSize="20" text="About"></Label>
+            <Label height="2" backgroundColor="#a9a9a9"></Label>
+            <Label margin="10" fontSize="20" text="Help"></Label>
+        </StackLayout>
+    </ScrollView>
+</StackLayout>
+
