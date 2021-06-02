@@ -2,45 +2,27 @@
   "bookings": {
     "booking1": {
       "id": "1",
-      "userId": "services/images/BMW 5 Series.jpg",
-      "carName": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FBMW%205%20Series.jpg?alt=media&token=dec5a0bf-e3ca-45d2-8f2e-c7b8a25530b5",
-      "startDate": "2",
-      "endDate": "Mercedes S-Class Cabriolet"
+      "userId": "demoUser1",
+      "carName": "Ford KA",
+      "carImage": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FFord%20KA%2B.jpg?alt=media&token=cf090183-ef5a-4c05-9f60-b0cbdfda7188",
+      "startDate": "31-05-21",
+      "endDate": "01-06-21"
     },
     "booking2": {
       "id": "2",
-      "userId": "services/images/Ford KA+.jpg",
-      "carName": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FFord%20KA%2B.jpg?alt=media&token=cf090183-ef5a-4c05-9f60-b0cbdfda7188",
-      "startDate": "2",
-      "endDate": "Mercedes S-Class Cabriolet"
+      "userId": "demoUser1",
+      "carName": "BMW 5 Series",
+      "carImage": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FBMW%205%20Series.jpg?alt=media&token=dec5a0bf-e3ca-45d2-8f2e-c7b8a25530b5",
+      "startDate": "01-06-21",
+      "endDate": "05-06-21"
     },
     "booking3": {
       "id": "3",
-      "userId": "services/images/Smart.jpg",
-      "carName": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FSmart.jpg?alt=media&token=6891aca9-4211-4545-834e-c934ed671961",
-      "startDate": "2",
-      "endDate": "Mercedes S-Class Cabriolet"
-    },
-    "booking4": {
-      "id": "4",
-      "userId": "services/images/Kia Sorento.jpg",
-      "carName": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FKia%20Sorento.jpg?alt=media&token=09ba5c41-5039-420f-b4fe-073dedb2ff1c",
-      "startDate": "2",
-      "endDate": "Mercedes S-Class Cabriolet"
-    },
-    "booking5": {
-      "id": "5",
-      "userId": "services/images/Mazda MX-5.jpg",
-      "carName": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FMazda%20MX-5.jpg?alt=media&token=d27f2a97-2e09-431e-ad8c-d0e7723955ef",
-      "startDate": "2",
-      "endDate": "Mercedes S-Class Cabriolet"
-    },
-    "booking6": {
-      "id": "6",
       "userId": "demoUser1",
-      "carName": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FMercedes%20S-Class%20Cabriolet.jpg?alt=media&token=dc17f427-407c-45c5-b827-ed3e108e0034",
-      "startDate": "2",
-      "endDate": "Mercedes S-Class Cabriolet"
+      "carName": "",
+      "carImage": "https://firebasestorage.googleapis.com/v0/b/car-rental-b26b7.appspot.com/o/cars_public%2FSmart.jpg?alt=media&token=6891aca9-4211-4545-834e-c934ed671961",
+      "startDate": "09-06-21",
+      "endDate": "11-06-21"
     }
   }
 }

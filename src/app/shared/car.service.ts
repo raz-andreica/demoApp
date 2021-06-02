@@ -16,14 +16,6 @@ const editableProperties = [
   'class',
 ]
 
-/* ***********************************************************
- * This is the master detail data service. It handles all the data operations
- * of retrieving and updating the data. In this case, it is connected to Firebase and
- * is using the {N} Firebase plugin. Learn more about it here:
- * https://github.com/EddyVerbruggen/nativescript-plugin-firebase
- * The {N} Firebase plugin needs some initialization steps before the app starts.
- * Check out how it is imported in the main.ts file and the actual script in /shared/firebase.common.ts file.
- *************************************************************/
 @Injectable({
   providedIn: 'root',
 })
@@ -60,12 +52,17 @@ export class CarService {
     }).pipe(catchError(this.handleErrors))
   }
 
-  //  TODO
-  //  update(carModel: Car): Promise<any> {
-  update(carModel: Car): void {
+  // update(carModel: Car): void {
+  //   const updateModel = CarService.cloneUpdateModel(carModel)
+  //
+  //   return ApiService.update('/cars/' + carModel.id, updateModel)
+  // }
+
+  update(carModel: Car): Promise<any> {
     const updateModel = CarService.cloneUpdateModel(carModel)
 
-    return ApiService.update('/cars/' + carModel.id, updateModel)
+    ApiService.update('/cars/' + carModel.id, updateModel)
+    return Promise.resolve();
   }
 
   //  TODO
